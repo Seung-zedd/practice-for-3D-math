@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
+// axis of X = red, axis of Y = green, axis of Z = blue
 export function initScene() {
   const scene = new THREE.Scene();
 

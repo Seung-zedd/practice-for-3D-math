@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export function linearCombination(c3, c2, c3) {;
+export function linearCombination(c1, c2, c3) {;
   // standard basis vector
   const e1 = new THREE.Vector3(1, 0, 0);
   const e2 = new THREE.Vector3(0, 1, 0);

@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { initScene } from "./init.js";
-import { linearCombination } from "./linearCombination.js";
+import { linearCombination } from "./Vector_spaces_and_Basis/linearCombination.js";
 
 const { scene, camera, renderer, controls } = initScene();
 
