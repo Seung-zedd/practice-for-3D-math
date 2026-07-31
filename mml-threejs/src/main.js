@@ -1,7 +1,8 @@
 import * as THREE from "three";
 import { initScene } from "./init.js";
-// import { linearCombination } from "./Vector_spaces_and_Basis/linearCombination.js";
+import { linearCombination } from "./Vector_spaces_and_Basis/linearCombination.js";
 import { linearDependence } from "./Vector_spaces_and_Basis/linearIndependence.js";
+import { scatterPoints } from "./Vector_spaces_and_Basis/scatterPoints.js";
 
 const { scene, camera, renderer, controls } = initScene();
 
@@ -11,9 +12,11 @@ const cube = new THREE.Mesh(
 );
 scene.add(cube);
 
-// const target = linearCombination(2, 1, 1.5);
-const target = linearDependence(2, 1, 1.5);
-cube.position.copy(target);
+// 독립: 3D 전체를 채우는 큐브 형태
+scatterPoints(scene, linearCombination, 0x44aa88);
+
+// 종속: e3 = 2*e1 이라 xy평면(z=0)에만 뭉개짐
+scatterPoints(scene, linearDependence, 0xff4444);
 
 function animate() {
   requestAnimationFrame(animate);
