@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { initScene } from "./init.js";
-import { linearCombination } from "./Vector_spaces_and_Basis/linearCombination.js";
+// import { linearCombination } from "./Vector_spaces_and_Basis/linearCombination.js";
+import { linearDependence } from "./Vector_spaces_and_Basis/linearIndependence.js";
 
 const { scene, camera, renderer, controls } = initScene();
 
@@ -10,7 +11,8 @@ const cube = new THREE.Mesh(
 );
 scene.add(cube);
 
-const target = linearCombination(2, 1, 1.5);
+// const target = linearCombination(2, 1, 1.5);
+const target = linearDependence(2, 1, 1.5);
 cube.position.copy(target);
 
 function animate() {
