@@ -8,10 +8,10 @@ import { createCompositionVisualization } from "./Linear_mapping_and_Matrix/tran
 
 const { scene, camera, renderer, controls } = initScene();
 
-// main.js is the exercise selector. Rotation is the default; the previous
-// vector-space exercise remains available at ?exercise=vector-spaces.
+// main.js is the exercise selector. The latest composition exercise is the
+// default; previous exercises remain available through the query parameter.
 const exercise =
-  new URLSearchParams(window.location.search).get("exercise") ?? "rotation";
+  new URLSearchParams(window.location.search).get("exercise") ?? "composition";
 
 let updateExercise = () => {};
 
