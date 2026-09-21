@@ -4,6 +4,7 @@ import { linearCombination } from "./Vector_spaces_and_Basis/linearCombination.j
 import { linearDependence } from "./Vector_spaces_and_Basis/linearIndependence.js";
 import { scatterPoints } from "./Vector_spaces_and_Basis/scatterPoints.js";
 import { createRotationVisualization } from "./Linear_mapping_and_Matrix/rotationMatrix.js";
+import { createCompositionVisualization } from "./Linear_mapping_and_Matrix/transformationComposition.js";
 
 const { scene, camera, renderer, controls } = initScene();
 
@@ -26,6 +27,8 @@ if (exercise === "vector-spaces") {
 
   // 종속: e3 = 2*e1 이라 xy평면(z=0)에만 뭉개짐
   scatterPoints(scene, linearDependence, 0xff4444);
+} else if (exercise === "composition") {
+  updateExercise = createCompositionVisualization(scene);
 } else {
   updateExercise = createRotationVisualization(scene);
 }
