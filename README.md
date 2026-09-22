@@ -1,6 +1,8 @@
 # practice-for-3D-math
 This repository has been used for the understanding of Mathematics for Machine Learning as followed below Table of Contents with typing the code per chapter.
 
+> “I wanted JARVIS. Unfortunately, I had to learn linear algebra first.”
+
 <br>
 
 📢Note that the below Table of Contents will be modified anytime when each Three.js module is added since i'm a newbie of both Three.js and MML as well.
