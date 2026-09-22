@@ -1,7 +1,7 @@
 # practice-for-3D-math
 This repository has been used for the understanding of Mathematics for Machine Learning as followed below Table of Contents with typing the code per chapter.
 
-> “I wanted JARVIS. Unfortunately, I had to learn linear algebra first.”
+> “I wanted JARVIS🤖. Unfortunately, I had to learn linear algebra first.”
 
 <br>
 
