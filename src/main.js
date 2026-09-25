@@ -6,13 +6,14 @@ import { scatterPoints } from "./Vector_spaces_and_Basis/scatterPoints.js";
 import { createRotationVisualization } from "./Linear_mapping_and_Matrix/rotationMatrix.js";
 import { createCompositionVisualization } from "./Linear_mapping_and_Matrix/transformationComposition.js";
 import { createAffineVisualization } from "./Linear_mapping_and_Matrix/affineMapping.js";
+import { createHomogeneousVisualization } from "./Linear_mapping_and_Matrix/homogeneousMatrix4.js";
 
 const { scene, camera, renderer, controls } = initScene();
 
 // main.js is the exercise selector. The latest affine-mapping exercise is the
 // default; previous exercises remain available through the query parameter.
 const exercise =
-  new URLSearchParams(window.location.search).get("exercise") ?? "affine";
+  new URLSearchParams(window.location.search).get("exercise") ?? "homogeneous";
 
 let updateExercise = () => {};
 
@@ -32,6 +33,8 @@ if (exercise === "vector-spaces") {
   updateExercise = createCompositionVisualization(scene);
 } else if (exercise === "affine") {
   updateExercise = createAffineVisualization(scene);
+} else if (exercise === "homogeneous") {
+  updateExercise = createHomogeneousVisualization(scene);
 } else {
   updateExercise = createRotationVisualization(scene);
 }
