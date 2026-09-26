@@ -32,7 +32,7 @@ This repository has been used for the understanding of Mathematics for Machine L
 - **XR connection:** Affine space provides the mathematical bridge from linear transformations to translation in 3D space
 - **Build:** An interactive transformation-matrix visualization
 
-### Weeks 5–6 — Homogeneous Coordinates and the MVP Pipeline
+### Weeks 5–6 — ☑️Homogeneous Coordinates and the MVP Pipeline
 
 - Move beyond MML into the Three.js rendering pipeline
 - Understand why 3D graphics uses 4×4 matrices and what the `w` component represents
