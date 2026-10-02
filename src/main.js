@@ -1,3 +1,4 @@
+import { startMvpExercise } from "./Linear_mapping_and_Matrix/mvpPipeline.js";
 import * as THREE from "three";
 import { initScene } from "./init.js";
 import { linearCombination } from "./Vector_spaces_and_Basis/linearCombination.js";
@@ -8,12 +9,15 @@ import { createCompositionVisualization } from "./Linear_mapping_and_Matrix/tran
 import { createAffineVisualization } from "./Linear_mapping_and_Matrix/affineMapping.js";
 import { createHomogeneousVisualization } from "./Linear_mapping_and_Matrix/homogeneousMatrix4.js";
 
+const selectedExercise = new URLSearchParams(window.location.search).get("exercise") ?? "mvp";
+if (selectedExercise === "mvp") {
+  startMvpExercise();
+} else {
 const { scene, camera, renderer, controls } = initScene();
 
-// main.js is the exercise selector. The latest affine-mapping exercise is the
-// default; previous exercises remain available through the query parameter.
+// Previous exercises remain available through the query parameter.
 const exercise =
-  new URLSearchParams(window.location.search).get("exercise") ?? "homogeneous";
+  selectedExercise;
 
 let updateExercise = () => {};
 
@@ -48,3 +52,5 @@ function animate() {
   renderer.render(scene, camera);
 }
 animate();
+
+}

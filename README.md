@@ -67,3 +67,22 @@ This repository has been used for the understanding of Mathematics for Machine L
 
 This roadmap is not a deadline. The objective is to keep the chain unbroken: study the mathematics, render it, interact with it, and eventually bring it into XR.
   
+
+## MVP 통합 실습 (2.10)
+
+```sh
+npm install
+npm run dev
+```
+
+기본 화면 또는 `?exercise=mvp`에서 실행한다. 왼쪽은 월드 관찰용 카메라, 오른쪽은 학습 카메라의 실제 화면이다. 왼쪽 드래그는 관찰 시점만 바꾼다. 노란 로컬 점 `(1, 1, 0, 1)`의 좌표를 표에서 따라간다.
+
+1. 기본 배치: 물체는 Z = −4, 카메라는 원점. 카메라 좌표 `(1, 1, −4, 1)`과 클립의 `w′ = 4`를 확인한다.
+2. 카메라 X를 +1로 이동: 점의 카메라 X는 0이 되고 화면 가운데 세로선으로 이동한다.
+3. 물체 Z를 −8로 이동: 깊이가 커지면 화면에서 점이 중심에 가까워지고 물체가 작아진다.
+4. 카메라 Y축 회전을 바꿔 축을 기준으로 좌표를 읽는 과정을 비교한다. 양의 회전은 오른손 규칙을 따른다.
+5. 시야각을 바꾸고 NDC 및 화면 좌표의 변화를 확인한다.
+
+표는 `p_clip = P V M p_local`을 단계별로 계산하고, 마지막에만 `w′`로 나눈다. 화면 좌표는 오른쪽 뷰의 CSS 픽셀 기준이며 화면 경계는 `(W, H)`이다. 흰 원은 계산한 점의 위치와 실제 렌더링을 비교한다. 카메라 뒤, 시야각 밖, near/far 밖의 점은 표시하지 않는다. near = 0.1, far = 20.
+
+이전 실습: `?exercise=homogeneous`, `affine`, `composition`, `vector-spaces`, `rotation`.
